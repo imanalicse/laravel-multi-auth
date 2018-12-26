@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">User Dashboard</div>
+                <div class="panel-heading">Admin Dashboard</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged as User!
+                    You are logged as Admin!
                 </div>
             </div>
         </div>
