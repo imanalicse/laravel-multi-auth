@@ -29,6 +29,6 @@ class AdminLoginController extends Controller
         }
 
         // If unsuccesfull, then redirect back to the login with the form data
-        return redirect()->back()->with($reqquest->only('email', 'remember'));    
+        return redirect()->back()->with($request->only('email', 'remember'));    
     }
 }
