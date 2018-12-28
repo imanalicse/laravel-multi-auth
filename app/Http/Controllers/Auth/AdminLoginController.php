@@ -28,7 +28,10 @@ class AdminLoginController extends Controller
             return redirect()->intended('admin');
         }
 
-        // If unsuccesfull, then redirect back to the login with the form data
-        return redirect()->back()->with($request->only('email', 'remember'));    
+        // If unsuccesfull, then redirect back to the login with the form data                
+        $validation = [
+            'email'=> 'These credentials do not match our records'
+        ];
+        return redirect()->back()->withInput($request->only('email', 'remember'))->withErrors($validation); 
     }
 }
